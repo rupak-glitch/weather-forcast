@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>Weather Forecast</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for a city...">
+                <button id="search-btn">Search</button>
+                <button id="current-location-btn">Use My Location</button>
+                <button id="save-location-btn">Save Location</button>
+            </div>
+        </header>
+        
+        <div id="weather-alert" class="weather-alert" style="display: none;">
+            <h3>Weather Alert</h3>
+            <p id="alert-text"></p>
+        </div>
+        
+        <section class="current-weather">
+            <h2 class="city-name" id="city-name">Loading...</h2>
+            <p class="date" id="current-date">--</p>
+            <p class="temperature" id="temperature">--°C</p>
+            <p class="weather-description" id="weather-description">--</p>
+            <div class="weather-details">
+                <div class="detail">
+                    <span class="material-icons">water_drop</span>
+                    <p>Humidity: <span id="humidity">--%</span></p>
+                </div>
+                <div class="detail">
+                    <span class="material-icons">air</span>
+                    <p>Wind: <span id="wind-speed">-- km/h</span></p>
+                </div>
+                <div class="detail">
+                    <span class="material-icons">compress</span>
+                    <p>Pressure: <span id="pressure">-- hPa</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="section-title">4-Day Forecast</h2>
+            <div class="forecast" id="forecast">
+                <!-- Forecast days will be added here dynamically -->
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="section-title">Hourly Forecast</h2>
+            <div class="hourly-forecast">
+                <div class="hourly-container" id="hourly-container">
+                    <!-- Hourly forecast items will be added here dynamically -->
+                </div>
+            </div>
+        </section>
+        
+        <section class="saved-locations">
+            <h2 class="section-title">Saved Locations</h2>
+            <div class="locations-grid" id="saved-locations-container">
+                <!-- Saved locations will be added here dynamically -->
+            </div>
+        </section>
+        
+        <footer>
+            <p>Weather data provided by OpenWeatherMap API</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
